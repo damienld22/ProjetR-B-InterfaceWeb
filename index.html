@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+	<head>
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+
+    <!-- Comporte toute la page-->
+    <body>
+    	<!-- Première ligne avec les quatres lampes -->
+    	<div class="row">
+
+    		<!-- Lampe 1 -->
+    		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img class="lampe" id="lampe1" src="images/lampe1.png" alt="icone de lampe">
+            </div>
+
+            <!-- Lampe 2 -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <img class="lampe" id="lampe2" src="images/lampe1.png" alt="icone de lampe">
+            </div>
+
+            <!-- Lampe 3 -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <img class="lampe" id="lampe3" src="images/lampe1.png" alt="icone de lampe">
+            </div>
+
+            <!-- Lampe 4 -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <img class="lampe" id="lampe4" src="images/lampe1.png" alt="icone de lampe">
+            </div>
+    	</div>
+
+    	<!-- Seconde ligne avec la barre de progression de la vitesse, et le motif sélectionné -->
+    	<div class="row">
+    		<div id = "cadre_motif" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-2">
+                <div class="progress">
+                    <div id="vitesse" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"  aria-valuemax="100" style="width: 80%;">80%</div>
+                </div>
+                <span id="motif" class="label label-default">Motif n 1</span>
+            </div>
+    	</div>
+
+    	<!-- Troisième ligne avec l'état des connexions et les boutons pour les gérer -->
+    	<div class="row">
+    		<!-- Card pour mettre les informations de connexion -->
+    		<div class="col-lg-4 col-lg-offset-1 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+	    		<div class="card card-block card-text" id="fond_connexion" style="background-image:url(images/cadre_blanc.png)">
+                    <img id="icone_connexion" src="images/connexion0.png">
+                    <img id="icone_screen" src="images/screen.png">
+                    <img id="icone_knx" src="images/knx.png">
+                    <p id="titre_connexion">Etat connexions</p>
+				    <p id="etat_connexion_serveur">Déconnecté</p>
+                    <p id="etat_connexion_knx">Déconnecté</p>
+                    
+                </div>
+			</div>
+			<!-- Card pour mettre les boutons pour la connexion -->
+			<div class="col-lg-4 col-lg-offset-1 col-md-offset-3 col-sm-offset(3 col-xs-offset-3">
+	    		<div class="card card-block card-text" id="fond_bouton" style="background-image:url(images/cadre_blanc.png)">
+                    <button type="button" class="btn btn-warning" id="btn_connexion_serveur" onclick=connexion()>Connexion au serveur</button>
+                    <button type="button" class="btn btn-warning" id="btn_connexion_knx" onclick=connexionKNX()>Connexion à la maquette</button>
+                    <button type="button" class="btn btn-warning" id="btn_activation_chenillard" onclick=chenillard()>Activation du chenillard</button>
+                </div>
+			</div>
+    	</div>
+
+    	<!-- Quatrième ligne pour la gestion du motif et le choix de la vitesse -->
+    	<div class="row">
+    		<div class="col-lg-2 col-lg-push-2 col-md-2 col-md-push-2 col-sm-2 col-sm-push-2 col-xs-5 col-xs-push-5">
+    			<table class="table table-bordered">
+    				<tr class="tab_vitesse">
+    					<td colspan="2">Vitesse</td>
+    				</tr>
+    				<tr class="tab_vitesse">
+    					<td class="icone_vitesse" background="images/plus_vitesse.png"><a href="#" onclick=vitessePlus()><img class="icone_vitesse" src="images/plus_vitesse.png"></a></td>
+    					<td class="icone_vitesse" background="images/moins_vitesse.png"><a href="#" onclick=vitesseMoins()><img class="icone_vitesse" src="images/moins_vitesse.png"></a></td>
+    				</tr>
+    			</table>
+    		</div>
+    		<div class="col-lg-2 col-lg-offset-5 col-md-3 col-md-offset-5 col-sm-4 col-sm-offset-5 col-xs-5 col-xs-offset-5">
+    			<table class="table table-bordered">
+    				<tr class="tab_motif">
+    					<td colspan="2">Choix du motif</td>
+    				</tr>
+    				<tr class="tab_motif">
+    					<td class="icone_motif" background="images/motif1.png"><a href="#" onclick=sendMotif(1)><img class="icone_motif" src="images/motif1.png"></a></td>
+    					<td class="icone_motif" background="images/motif2.png"><a href="#" onclick=sendMotif(2)><img class="icone_motif" src="images/motif2.png"></a></td>
+    				</tr>
+    				<tr class="tab_motif">
+    					<td class="icone_motif" background="images/motif3.png"><a href="#" onclick=sendMotif(3)><img class="icone_motif" src="images/motif3.png"></a></td>
+    					<td class="icone_motif" background="images/motif_random.png"><a href="#" onclick=sendMotif(4)><img class="icone_motif" src="images/motif_random.png"></a></td>
+    				</tr>
+    			</table>
+    		</div>
+    	</div>
+    	<script src="script.js"></script>
+    	<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+    </body>

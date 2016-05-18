@@ -1,0 +1,122 @@
+/*
+ *	Design général de la page
+ */
+body {
+	margin-top      : -55px;
+	background-color: #F1EDD0;
+	text-align      : center;
+	padding-right   : 15px;
+	padding-left    : 15px;
+	margin-right    : 10px;
+	margin-left     : 10px;
+}
+
+/*
+ *	Taille des 4 lampes
+ */
+.lampe {
+	height: 150px;
+}
+
+
+
+/*
+ *	Gestion des boutons de vitesse
+ */
+ .icone_vitesse {
+ 	height: 100px;
+ }
+
+/*
+ *	Gestion du tableau de vitesse et de motif
+ */
+.tab_vitesse, .tab_motif {
+ 	background-color: #FFFFFF;  
+}
+
+/*
+ *	Gestion des boutons de motif
+ */
+ .icone_motif {
+ 	height: 50px;
+ }
+
+/*
+ *	Taille et position du fond de l'affichage des connexions
+ */
+#fond_connexion, #fond_bouton {
+	height: 200px;
+	width: 500px;
+	margin-top: 10px;
+}
+
+#titre_connexion {
+	font-size: 180%;
+	position: relative;
+	top: 20px;
+	left: 0px;
+	float: left;
+}
+
+#btn_connexion_serveur {
+	position: absolute;
+	top: 40px;
+	left: 160px;
+	width: 200px;
+}
+
+#btn_connexion_knx {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	width: 200px;
+}
+
+#btn_activation_chenillard {
+	position: absolute;
+	top: 100px;
+	left: 280px;
+	width: 200px;
+}
+
+#icone_screen {
+	height: 40px;
+	width: 50px;
+	position: relative;
+	top: 110px;
+	left: 70px;
+	float: left;
+}
+
+#icone_knx {
+	height: 40px;
+	width: 50px;
+	position: relative;
+	top: 105px;
+	left: 230px;
+	float: left;
+}
+
+#icone_connexion {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	float: left;
+}
+
+#etat_connexion_serveur {
+	position: absolute;
+	bottom: 15px;
+	left: 120px;
+}
+
+#etat_connexion_knx {
+	position: absolute;
+	bottom: 15px;
+	left: 330px;
+}
+
+#cadre_motif {
+	margin-bottom: -30px;
+}
+
